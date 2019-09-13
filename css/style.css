@@ -1,0 +1,250 @@
+html {
+    box-sizing: border-box;
+  }
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* slecetor universal  */
+/* para quitar el margin por defecto de la pagina*/
+* { margin: 0}
+
+img { 
+    max-width: 100%;
+}
+
+p { 
+    font-size: 16px; 
+    /* interlineado */
+    line-height: 2;
+}
+
+.boton { 
+    background-color: #00b8e4;
+    padding: 10px 60px;
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* negritas */
+    font-weight: bold;
+    /* mas grande el texto */
+    font-size: 10px;
+    /* para cuando pase el maus 
+    el cambio del color del boton 
+    q se hizo con el hover no se cambien tan rapio  */
+    transition: background-color .3s ease-in-out;
+}
+.boton:hover {
+    background-color: rgb(0, 131, 164);
+}
+
+
+/* ------------------------ Header ----------------- */
+.site-header { 
+    /* funciona como las manecillas del relog, 
+    arriba, izquierda, abajo, derecha */
+    padding: 20px 0 20px 0;     
+
+} 
+
+.contenedor {
+    /* toma todo el expacio que necesitees pero
+    como limete de 1200 pixeles */
+    max-width: 1200px ;
+    margin: 0 auto;
+    /* para solucionar l problema del float del overflow se pone en bloque*/
+    overflow: auto;
+}
+
+
+/*------------ Navegacion responsive ------------*/
+
+.mobile-menu { 
+    /* diseño de la icono de 3 puntos */
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    display: block; 
+    padding: 20px 0;
+}
+
+
+
+
+
+/* ----------------------------Navegacion-------------- */
+.barra { 
+    background-color: #DB008D;
+    margin-top: 40px;
+}
+.navegacion-principal a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    /* block, hace que aagrre todo su espacio disponible */
+    display: block;
+    text-align: center;
+    padding: 18px;
+}
+
+@media (min-width:768px){
+    .navegacion-principal a{ 
+        /* solo se pone lo que se necesita */
+        /* inline-block, hace que se agrande y lo pone horiznotal */
+        display: inline-block;
+        margin-right: 15x;
+    }
+}
+
+.navegacion-principal a:hover {
+     /*cuando se ponga cursos el color se cambie a azul*/
+    background-color: #00b8e4;
+}
+
+/* ----------------------------Main-------------- */
+.contenido-principal {
+    margin-top: 40px;
+}
+
+.contenido-principal, .sidebar { 
+    padding: 20px;
+}
+
+/* asilo hacer los framewoks, los isde bar abajo y
+ cuando es grande lo acomdan */
+@media (min-width: 768px) {
+    .contenido-principal { 
+        width: 70%;
+        /* flotalo hacia la izquierda */
+        float: left;
+        padding: 0 60px 0 0;
+    }
+    
+    .sidebar { 
+        width: 30%;
+        /* flota a la derecha */
+        float: right;
+        padding:0;
+        margin-top: 40px;
+    }
+}
+
+
+h2 { 
+    color: #00b8e4;
+    margin-bottom: 20px;
+}
+
+.entrada { 
+    margin-bottom: 60px;
+}
+
+.entrada:last-of-type {
+    margin-bottom: 10px;
+}
+.entrada img { 
+    display: block;
+}
+@media (min-width: 480px){
+    .entrada img { 
+        width: 300px;
+        /* el continido de su alredor fluya la imagen */
+        float: left;
+        margin: 0 30px 0 0; 
+    }
+
+}
+
+
+/*  */
+.entrada p { 
+    /* jsutificar el texto */
+    text-align: justify;
+}
+
+.sidebar ul { 
+    list-style: none;
+    padding: 0; 
+}
+
+.sidebar ul li { 
+    padding: 10px 10px 10px 0;
+}
+
+.sidebar ul li:hover {
+    /* este le va dar estilo solo al li 
+    es decir al bloque de la lista */
+    background-color: #00b8e4;
+}
+
+.sidebar ul li a { 
+    color: #00b8e4;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.sidebar ul li:hover a { 
+    /* le da estilos a las letras, 
+    de en la lista */
+    color: #ffffff;
+}
+
+/* ----------------------------Footer-------------- */
+.footer-site { 
+    padding-top: 40px; 
+    background-color: #DB008D;
+     margin-top: 20x;
+     color: #ffffff;
+    text-align: center;
+ }
+
+.footer-site h2 {
+     color: white;
+ }
+
+ .footer-site a { 
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 20px;
+ }
+ .footer-site a:last-of-type { 
+     margin-right: 0;
+ }
+
+ @media (min-width: 768px){
+     .footer-site .nosotros { 
+         float: left;
+         width: 30%;
+        text-align: left;
+        }
+     .footer-site .menu { 
+         float: right;
+         width: 50%;
+         text-align: right;
+     }
+ }
+
+ /* para recetear llos flexbox */
+ .clearfix:after{ 
+    content:'';
+    clear: both;
+    display: block;
+ }
+ 
+ .coyright {
+     background-color: #b10474;
+     margin: 50px 0 0 0;
+     padding: 20px; 
+ }
+
+ .coyright span { 
+    font-weight: bold;
+ }
+
