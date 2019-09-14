@@ -1,4 +1,4 @@
-html {
+pahtml {
     box-sizing: border-box;
   }
 *, *:before, *:after {
@@ -58,12 +58,18 @@ p {
     como limete de 1200 pixeles */
     max-width: 1200px ;
     margin: 0 auto;
-    /* para solucionar l problema del float del overflow se pone en bloque*/
+    /* para solucionar l problema del float del overflow
+     se pone en bloque*/
     overflow: auto;
 }
 
 
 /*------------ Navegacion responsive ------------*/
+.barra {
+    /* cuando con el max height de 0, se pasans de los limites 
+    y overflow hace q si se pasa los quite de ahi */
+    overflow: hidden;
+}
 
 .mobile-menu { 
     /* diseño de la icono de 3 puntos */
@@ -74,8 +80,32 @@ p {
     padding: 20px 0;
 }
 
+/* cuando se de click al id de nav se aplica este estilo*/
+#nav:target { 
+    /* , se expande al max height de 800  */
+    max-height: 800px;
+}
 
+.navegacion-principal {
+    /* para oculatr la barra de menu */
+    max-height: 0;
+    /* q genere una peqeña transicion */
+    transition: .5s;
+}
 
+/* para que cuando se destok se oculte  */
+@media (min-width:768px) {
+    .mobile-menu, .cerrar { 
+        /* por los estilos de font awasone lo impongo el display */
+        display: none!important;
+    }
+
+     /*se epexifica q se ignoe el max higth, ya q se oculte por 
+     heredacion de estilos */
+     .navegacion-principal {
+         max-height: unset;
+     }
+}
 
 
 /* ----------------------------Navegacion-------------- */
